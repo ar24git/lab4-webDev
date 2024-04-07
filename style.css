@@ -1,0 +1,82 @@
+body{
+    background-color: #FFEAA7;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    /* isws stretch???? */
+    padding: 1rem;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* so that it displays correctly on big screens */
+@media screen and (min-width: 700px) {
+    .tasks{
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+.tasks .title{
+    margin: 2rem 0;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.tasks #item{
+    font-style: italic;
+    font-size: 1rem;
+    border: none;
+    border-bottom: dashed;
+    border-color: gray;
+}
+
+.tasks .statistics{
+    align-self: end;
+}
+
+.tasks li{
+    display: flex;
+    margin: 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tasks li span{
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+.tasks ul{
+    list-style-type: none;
+}
+
+.tasks li button{
+    display: block;
+    margin-left: 1rem;
+    border-radius: 5px;
+    color: gray;
+    border-color: gray;
+}
+
+.statistics .total{
+    margin-left: 1rem;
+}
+
+.statistics .left-todo{
+    margin-left: 1rem;
+}
+
+.done{
+    color: gray;
+    text-decoration: line-through;
+}
+
