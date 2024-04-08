@@ -10,7 +10,7 @@ leftToDo.textContent = getTotalCount() - getDoneCount();
 //
 // Γράψτε εδώ τον κώδικά σας
 // Write your code here
-//
+// remove button
 const buttons = document.querySelectorAll("button");
 const toDoList = document.querySelectorAll("li");
 for(let i=0;i<buttons.length;i++){
@@ -20,6 +20,20 @@ for(let i=0;i<buttons.length;i++){
         leftToDo.textContent = getTotalCount() - getDoneCount();
     });
 }
+
+//input
+const input  = document.getElementById("item");
+
+input.addEventListener("keyup", function(e){
+    if(e.key==='Enter'){
+        alert(e);
+    }
+});
+
+
+
+
+
 
 //--------------------------------------------------
 // Ο παραπάνω κώδικας θα κάνει χρήση των εξής συναρτήσεων:
