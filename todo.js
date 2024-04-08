@@ -45,13 +45,17 @@ input.addEventListener("keyup", function(e){
         
         const secondInnerItem = document.createElement("button");
         secondInnerItem.textContent = "Αφαίρεση";
+        secondInnerItem.addEventListener("click", function(){ 
+            listItem.classList.add("done");
+            const leftToDo = document.querySelector(".left-todo");
+            leftToDo.textContent = getTotalCount() - getDoneCount();
+        });
         listItem.appendChild(secondInnerItem);
 
         
         toDoList.appendChild(listItem);
         input.value = "";
         colorEveryOddTask();
-        removeFunctionality();
         countCalculator();
     }
 });
