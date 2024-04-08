@@ -37,9 +37,17 @@ input.addEventListener("keyup", function(e){
     if(e.key==='Enter'){
         //add task
         const listItem = document.createElement("li");
-        listItem.innerHTML += "<span>"+ input.value +"</span><button>Αφαίρεση</button>";
-
         let toDoList = document.querySelector(".task-list");
+
+        const firstInnerItem = document.createElement("span");
+        firstInnerItem.textContent = input.value;
+        listItem.appendChild(firstInnerItem);
+        
+        const secondInnerItem = document.createElement("button");
+        secondInnerItem.textContent = "Αφαίρεση";
+        listItem.appendChild(secondInnerItem);
+
+        
         toDoList.appendChild(listItem);
         input.value = "";
         colorEveryOddTask();
